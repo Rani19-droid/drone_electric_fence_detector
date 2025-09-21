@@ -1,11 +1,41 @@
 /* ---------- General / Colors ---------- */
 :root{
-  --sea-green: #f3f2f1;       /* sea green primary */
-  --dark: #0f3d36;
+  --sea-green: #f3f2f15e;       /* sea green primary */
+  --dark: #e8f3f1;
   --accent: #ff7a00;          /* orange accent */
-  --white: #ffffff;
-  --overlay-white: rgba(255,255,255,0.98);
+  --white: #ffffff5c;
+  --overlay-white: rgba(255, 255, 255, 0.217);
   --text-muted: #0a0b0b;
+}
+/* Dashboard content spacing */
+.dashboard-container {
+  max-width: 1200px;    /* max width of content */
+  margin: 0 auto;       /* horizontally center */
+  padding: 0 20px;      /* left & right space */
+  box-sizing: border-box;
+}
+.dashboard-card {
+  background-color: #fff;           /* white background */
+  border-radius: 8px;               /* optional rounded corners */
+  padding: 20px;                    /* content ke andar space */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* subtle shadow 3D look */
+}
+.dashboard-card:hover {
+  box-shadow: 0 8px 20px rgba(247, 240, 240, 0.15);
+}
+
+
+.app-proto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* pehle 10px tha, ab thoda zyada gap */
+  margin-bottom: 20px; /* neeche bhi space */
+  padding: 15px;                    /* content ke andar thoda space */
+  border: 2px solid #ccc;           /* grey border, thickness 2px */
+  border-radius: 8px;               /* corners thode rounded */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease;   
 }
 
 /* Reset simple things */
@@ -104,31 +134,31 @@ body{ background: var(--sea-green); }
   width:85%;
   max-width:920px;
   padding:28px 34px;
-  background: linear-gradient(0deg, rgba(0,0,0,0.42), rgba(0,0,0,0.22));
+  background: linear-gradient(0deg, rgba(241, 231, 231, 0.162), rgba(243, 231, 231, 0.094));
   border-radius:10px;
   color:var(--white);
   opacity:0;
   transform: translateY(10px);
   transition: opacity .8s ease, transform .6s ease;
-  text-align:left;
+  text-align:center;
 }
 .slide.active{ opacity:1; transform:none; }
 
 /* Slide text */
-.slide-title{ color:var(--accent); font-weight:800; font-size:22px; letter-spacing:1px; text-transform:uppercase; margin-bottom:10px; }
-.slide-sub{ color:#101010; font-size:15px; margin-bottom:12px; line-height:1.4; }
-.slide-points{ margin:8px 0 12px 0; color:#0b0b0b; font-weight:600; }
+.slide-title{ color:var(--accent); font-weight:bold; font-size:22px; letter-spacing:1px; text-transform:uppercase; margin-bottom:10px; }
+.slide-sub{ color:#f9f2f2; font-size:15px; margin-bottom:12px; line-height:1.4; }
+.slide-points{ margin:8px 0 12px 0; color:#f2e8e8; font-weight:600; }
 .slide-points li{ margin:6px 0; }
 
 /* Buttons */
 .btn{ display:inline-block; padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:700; }
-.btn-primary{ background:var(--accent); color:#0a0909; box-shadow: 0 6px 18px rgba(255,122,0,0.18); }
+.btn-primary{ background:var(--accent); color:#f9f7f7; box-shadow: 0 6px 18px rgba(255,122,0,0.18); }
 .btn-secondary{ background:rgba(255,255,255,0.18); color:#111111; border:1px solid rgba(255,255,255,0.08); }
 
 /* ---------- Quick info section ---------- */
 .quick-info{ display:flex; gap:16px; margin-top:18px; justify-content:center; flex-wrap:wrap; }
 .info-card{
-  background: rgba(255,255,255,0.06);
+  background: rgba(248, 242, 242, 0.06);
   border-radius:10px;
   padding:14px 18px;
   min-width:210px;
@@ -139,14 +169,14 @@ body{ background: var(--sea-green); }
 .info-card i{ font-size:20px; color:var(--accent); margin-bottom:8px; display:block; }
 
 /* ---------- About CTA ---------- */
-.about-cta{ display:flex; gap:18px; margin-top:18px; align-items:center; justify-content:space-between; background: rgba(255,255,255,0.03); padding:18px; border-radius:10px; color:#fff; }
-.about-text h2{ font-size:20px; color:#070707; margin-bottom:6px; }
+.about-cta{ display:flex; gap:18px; margin-top:18px; align-items:center; justify-content:space-between; background: rgba(12, 11, 11, 0.03); padding:18px; border-radius:10px; color:#fff; }
+.about-text h2{ font-size:20px; color:#100f0f; margin-bottom:6px; }
 .about-cta-btn{ text-align:right; }
 .scene{
   position:relative;
   width:100%;
   height:320px;
-  background:linear-gradient(180deg,#090909, transparent);
+  background:linear-gradient(180deg,hwb(92 90% 4%), transparent);
   border-radius:12px;
   overflow:hidden;
   padding:12px;
@@ -157,8 +187,8 @@ body{ background: var(--sea-green); }
   right:0;
   bottom:0;
   height:72px;
-  background:linear-gradient(180deg,#080808,#0d0e0d);
-  box-shadow:inset 0 6px 20px rgba(6,76,53,0.03);
+  background:linear-gradient(180deg,#c1dba1af,#e1efe1);
+  box-shadow:inset 0 6px 20px rgba(236, 239, 238, 0.447);
 }
 .drone{
   position:absolute;
@@ -175,9 +205,9 @@ body{ background: var(--sea-green); }
 .drone .body{
   width:64px;
   height:28px;
-  background:linear-gradient(90deg,#0a0909,#0b0b0b);
+  background:linear-gradient(90deg,#fffafa,#f4f0f0);
   border-radius:8px;
-  box-shadow:0 6px 12px rgba(2,6,23,0.06);
+  box-shadow:0 6px 12px rgb(245, 246, 250);
   display:flex;
   align-items:center;
   justify-content:center;
@@ -189,7 +219,7 @@ body{ background: var(--sea-green); }
   top:-8px;
   width:18px;
   height:6px;
-  background:rgba(10,10,10,.08);
+  background:rgb(250, 246, 246);
   border-radius:6px;
 }
 .prop.left{left:-4px}
@@ -246,6 +276,33 @@ tr.good {
 tr.bad {
   background: #050504;
 }
+/* App prototype */
+.app-proto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mini-map {
+  position: relative;
+  height: 260px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #ffffff, #f0fff7);
+  overflow: hidden;
+}
+.drone-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ff3b30;
+  box-shadow: 0 6px 12px rgba(255, 59, 48, .12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 10px;
+}
+
 
 
 
@@ -275,4 +332,14 @@ tr.bad {
   .hero{ height:420px; }
   .slide{ width:92%; padding:18px; }
   .info-card{ min-width:140px; padding:10px; }
+}
+h2{
+  text-align: center;
+
+}
+p{
+  text-align: center;
+}
+.btn btn-primary{
+  text-align: center;
 }

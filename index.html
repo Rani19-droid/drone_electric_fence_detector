@@ -29,11 +29,11 @@
       padding: 22px;
       border-radius: 12px;
       box-shadow: 0 10px 26px rgba(0,0,0,0.20);
-      color: #fff;
+      color: #050404;
     }
 
-    .login-card h2{ color: #fff; margin-bottom:10px; font-size:20px; }
-    .login-card p.desc{ color: rgba(255,255,255,0.85); margin-bottom:12px; font-size:14px; }
+    .login-card h2{ color: #474141; margin-bottom:10px; font-size:20px; }
+    .login-card p.desc{ color: rgba(26, 25, 25, 0.85); margin-bottom:12px; font-size:14px; }
 
     .form-row { margin-bottom:12px; }
     .form-row input {
@@ -44,20 +44,20 @@
       outline: none;
       font-size:14px;
       background: rgba(255,255,255,0.08);
-      color:#fff;
+      color:#030303;
     }
-    .form-row input::placeholder { color: rgba(255,255,255,0.7); }
+    .form-row input::placeholder { color: rgba(39, 37, 37, 0.7); }
 
     .login-actions { display:flex; gap:10px; align-items:center; margin-top:6px; }
     .login-actions .btn { padding:10px 14px; border-radius:8px; cursor:pointer; text-decoration:none; }
-    .btn-login { background: var(--accent); color:#fff; font-weight:800; border:none; }
-    .btn-alt { background: rgba(255,255,255,0.08); color:#fff; border: none; }
+    .btn-login { background: var(--accent); color:#0b0a0a; font-weight:800; border:none; }
+    .btn-alt { background: rgba(255,255,255,0.08); color:#111111; border: none; }
 
-    .helper { font-size:13px; color: rgba(255,255,255,0.75); margin-top:10px; }
+    .helper { font-size:13px; color: rgba(12, 12, 12, 0.75); margin-top:10px; }
     .error { color:#ffb4a6; font-weight:700; margin-top:8px; }
 
     /* Demo credentials box */
-    .cred-box { margin-top:12px; background: rgba(0,0,0,0.12); padding:10px; border-radius:8px; font-size:13px; color:#fff; }
+    .cred-box { margin-top:12px; background: rgba(3, 3, 3, 0.12); padding:10px; border-radius:8px; font-size:13px; color:#fff; }
 
     @media (max-width:880px){
       .login-grid { grid-template-columns: 1fr; }
@@ -93,9 +93,9 @@
   <!-- LOGIN MAIN -->
   <main class="login-page">
 
-    <section style="text-align:center; color:#fff; margin-bottom:18px;">
+    <section style="text-align:center; color:#0d0c0c; margin-bottom:18px;">
       <h1 style="font-size:26px; margin-bottom:6px;">Sign in to Drone System</h1>
-      <p style="color:rgba(255,255,255,0.85); max-width:820px; margin:0 auto;">
+      <p style="color:rgb(5, 4, 4); max-width:820px; margin:0 auto;">
         Choose Admin or User login. Use demo credentials (shown below) for testing. In production, integrate with your backend auth.
       </p>
     </section>
@@ -245,9 +245,18 @@
 
 </body>
 </html>
-            <h2>Welcome to Drone Electric Fence Detector</h2>
+            <h2 >Welcome to Drone Electric Fence Detector</h2>
             <p class="desc">Monitor electric fences with ease using our advanced drone technology.</p>
-            <a href="#features" class="btn btn-primary">Explore Features</a>
+            <section style="display:flex; justify-content:center; align-items:center;">
+            <a href="#features" class="btn btn-primary">Explore Features</a></section>
+            <style>
+.center-btn {
+  display: block;       /* make it a block element */
+  margin: 20px auto;    /* auto margin will center it */
+  width: fit-content;   /* button jitna hi width */
+}
+</style>
+
           </div>
 
           <!-- Slide 2 -->
@@ -255,6 +264,7 @@
             <h2>Real-time Alerts</h2>
             <p class="desc">Get instant notifications on fence breaches and anomalies.</p>
             <a href="#alerts" class="btn btn-primary">Learn More</a>
+            
           </div>
 
           <!-- Slide 3 -->
